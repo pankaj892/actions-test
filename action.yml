@@ -1,0 +1,14 @@
+name: 'Welcome Message'
+description: 'Sends a welcome message'
+inputs:
+  name:  # id of input
+    description: 'Name to welcome'
+    required: true
+    default: 'GitHub User'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Welcome User
+      run: echo "Welcome, ${{ inputs.name }}. Glad to have you here!"
+      shell: bash
